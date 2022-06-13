@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('sku');
             $table->string('nombre');
             $table->string('descripcion');
+            $table->foreignId('categoria_id');
             $table->decimal('precio', 13, 2);
             $table->integer('cantidad');
             $table->boolean('estado');
