@@ -21,4 +21,9 @@ class Producto extends Model
     ];
 
     protected $hidden = ['created_at', 'updated_at'];
+
+    public function categorias()
+    {
+        return $this->hasMany(CategoriaProducto::class);
+    }
 }
