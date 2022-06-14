@@ -26,4 +26,9 @@ class Producto extends Model
     {
         return $this->hasMany(CategoriaProducto::class);
     }
+
+    public function calificaciones()
+    {
+        return $this->hasMany(Calificacion::class);
+    }
 }
