@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
-            $table->string('sku');
-            $table->string('nombre');
-            $table->string('descripcion');
+            $table->string('sku', 20);
+            $table->string('nombre', 50);
+            $table->string('descripcion', 255);
             $table->foreignId('categoria_id');
             $table->decimal('precio', 13, 2);
-            $table->integer('cantidad');
-            $table->boolean('estado');
+            $table->integer('cantidad')->unsigned();
+            $table->boolean('estado')->default(true);
             $table->timestamps();
         });
     }

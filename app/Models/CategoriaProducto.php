@@ -16,13 +16,13 @@ class CategoriaProducto extends Model
         'producto_id'
     ];
 
-    public function productos()
+    public function producto()
     {
-        return $this->belongsTo(Categoria::class);
+        return $this->belongsTo(Producto::class, 'producto_id');
     }
 
-    public function categorias()
+    public function categoria()
     {
-        return $this->belongsTo(Producto::class);
+        return $this->belongsTo(Categoria::class, 'categoria_id');
     }
 }

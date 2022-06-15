@@ -24,5 +24,7 @@ Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos/{id}', 'show');
     Route::post('/productos', 'store');
     Route::put('/productos/{id}', 'update');
+    Route::patch('/productos/stock/{id}', 'stock');
+    Route::patch('/productos/calificar/{id}', 'calificar');
     Route::delete('/productos/{id}', 'destroy');
 });
